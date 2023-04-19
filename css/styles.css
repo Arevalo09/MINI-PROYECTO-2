@@ -1,0 +1,42 @@
+
+/* Font Family 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+
+.B1{
+    font-family: 'Montserrat';
+    size: 12px;
+    font-weight: 700;
+}
+
+.B2{
+    font-family: 'Montserrat';
+    size: 14px;
+    font-weight: 500;
+}
+
+.ST1{
+    font-family: 'Montserrat';
+    size: 14px;
+    font-weight: 500;
+}
+
+.D1{
+    font-family: 'Montserrat';
+    size: 16px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.EU1 {
+    aspect-ratio: 1/1;
+}
+.IMG{
+    object-fit: cover;
+}
+
+.ES1{
+    color: #EB5757;
+}
+

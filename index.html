@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link de Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Link de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <!-- Link de CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+
+  <script src="./js/app.js" type="module" defer></script>
+  <title>Document</title>
+</head>
+
+<body class="container">
+
+
+  <header class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-lg-4 mt-3 gap-5">
+    <div class="d-flex align-self-start align-self-md-center">
+      <img src="./img/logo.png" alt="">
+    </div>
+
+    <article class="d-flex rounded-4">
+      <p class="p-3 m-0 cursor-text">Add location</p>
+      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none">Add guests</p>
+      <!-- Icono Search de google Icons -->
+      <span class="material-symbols-outlined text-danger p-3 pointer" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+        search </span>
+
+
+      <div class="offcanvas offcanvas-top h-75" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel"> Edit your search </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex row-2">
+          <div class="cuadro dropdown col">
+            <a class="btn btn-secondary dropdown-toggle w-100" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <p> LOCATION </p>
+              <input type="search" placeholder="Add location"></input>
+            </a>
+
+            <ul class="dropdown-menu w-100" id="cities-list">
+            </ul>
+          </div>
+
+          <div class="cuadro dropdown col">
+            <a class="btn btn-secondary dropdown-toggle w-100" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <p> GUESTS </p>
+              <input type="search" placeholder="Add guests"></input>
+            </a>
+
+            <div class="dropdown-menu w-100" id="counter">
+
+              <p class="text-black fw-bolder"> Adults </p>
+              <p class="text-body-secondary"> Ages 13 or above </p>
+
+              <div class="d-flex"> 
+
+                <div class="rounded-0 border border-primary-subtle border border-3 px-2" id="restaAdultos"> - </div> 
+ 
+                <div class="border border-primary-subtle px-2" id="totalAdultos"> 0 </div> 
+ 
+                <div class="rounded-0 border border-primary-subtle border border-3 px-2" id="sumaAdultos"> + </div> 
+
+              </div>
+
+              
+              <p class="text-black fw-bolder"> Children </p>
+              <p class="text-body-secondary"> Ages 2-12 </p>
+
+              <div class="d-flex"> 
+
+                <div class="rounded-0 border border-primary-subtle border border-3 px-2" id="restaNiños"> - </div> 
+ 
+                <div class="border border-primary-subtle px-2" id="totalNiños"> 0 </div> 
+ 
+                <div class="rounded-0 border border-primary-subtle border border-3 px-2" id="sumaNiños"> + </div> 
+               
+
+              </div>
+
+            </div>
+
+            
+
+          </div>
+
+        </div>
+      </div>
+
+    </article>
+
+
+  </header>
+  <main>
+    <div class="d-flex mt-5 justify-content-between">
+      <h1 class="fs-3"> Stays in
+        <!-- Aquí va el lugar -->
+        <span id="place"></span>
+      </h1>
+      <p><span id="stays"></span> Stays </p>
+    </div>
+
+    <!-- CARDS class="col" -->
+    <section class="container text-center">
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="jaac">
+
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
